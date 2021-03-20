@@ -1,0 +1,206 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+img{
+    max-width: 100%;
+    
+}
+
+
+.addTravelArea{
+    display: flex;
+    justify-content: center;
+    padding: 60px 0;
+    max-width: 920px;
+    margin: 0 auto;
+    box-shadow: 0 5px 5px #E0E0E0;
+    border-radius: 10px;
+}
+.imgArea{
+    display: flex;
+    flex-direction: column;
+    width: 38%;
+}
+form{
+    display: flex;
+    flex-direction: column;
+    width: 38%;
+    
+}
+form h1{
+    font-size: 24px;
+    font-weight: bold;
+    color: #00807E;
+    border-bottom: 3px solid #00807E;
+    margin-bottom: 32px;
+    padding-bottom: 4px;
+    
+}
+form .btn{
+align-self: flex-end;
+   color: white;
+   background: #00807E;
+   font-size: 20px;
+   border: none;
+   border-radius: 4px;
+   padding: 10px 40px;
+   margin-top: 8px;
+   cursor: pointer;
+}
+.inputArea{
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 16px;
+    
+}
+.inputArea label{
+    color: #00807E;
+    font-weight: bold;
+}
+.inputArea input,.inputArea select,.inputArea textarea{
+    width: 72%;
+    padding: 8px 0;
+    text-indent: 12px;
+    background: #fafafa;
+    border:none;
+    border-bottom: 2px solid #00807E;
+    color: #818a91;
+    
+}
+
+.travelArea{
+    padding: 56px 0;
+    background: #f7f7f7;
+    margin-top: 100px;
+}
+
+.searchArea{
+    display: flex;
+    align-items: center;
+    max-width: 920px;
+    margin: 0 auto 50px auto;
+    color: #818a91;
+}
+.searchArea select{
+    padding: 8px 0;
+    text-indent: 12px;
+    color: #818a91;
+    width: 28%;
+    margin-right: 30px;
+    border-radius: 4px;
+    border-color: #CED4DA;
+}
+.travelArea ul{
+    display: flex;
+    max-width: 1110px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+}
+.travelArea .travelDescription{
+    padding: 20px;
+    
+}
+.travelArea img{
+    max-height: 230px;
+    width: 100%;
+  
+}
+.travelArea ul li{
+    box-shadow: 0 5px 5px #E0E0E0;
+    width: 31.3333%;
+    margin: 0 1% 30px 1%;
+    position: relative;
+
+}
+.travelDescription h2{
+    font-size: 24px;
+    color: #00807E;
+    border-bottom: 3px solid #00807E;
+    padding-bottom: 4px;
+    margin-bottom: 20px;
+}
+.travelDescription p{
+    color: #818a91;
+    line-height: 1.5;
+    margin-bottom: 30px;
+    min-height: 75px;
+}
+.travelCost{
+    display: flex;
+    justify-content: space-between;
+    color: #00807E;
+    align-items: center;
+    
+}
+.travelCost p{
+    display: flex;
+    align-items: center;
+    color: #00807E;
+    margin-bottom: 0;
+}
+
+.travelCost p span{
+    font-weight: bold;
+    font-size: 32px;
+    margin-left: 2px;
+}
+.location{
+    padding: 8px 20px;
+    color: #fff;
+    font-size: 20px;
+    background: #64c3bf;
+    position: absolute;
+    top: -10px;
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+}
+.starlevel{
+    padding: 5px 8px;
+    color: #fff;
+    background: #00807E;
+    position: absolute;
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+    top: 217px;
+}

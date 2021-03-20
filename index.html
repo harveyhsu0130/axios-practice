@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="all.css">
+    <link rel="stylesheet" href="fontawsome.css">
+</head>
+
+<body>
+    <div class="addTravelArea">
+        <div class="imgArea">
+            <img src="img/undraw_Traveling_re_weve (1).png" alt="">
+            <img src="img/Let’s Travel !.png" alt="">
+        </div>
+
+        <form>
+            <h1><i class="fas fa-plus-circle"></i>新增旅遊套票</h1>
+            <div class="inputArea">
+                <label for="">套票名稱</label>
+                <input type="text" placeholder="請填寫套票名稱" class="travelName">
+            </div>
+            <div class="inputArea">
+                <label for="">圖片網址</label>
+                <input type="text" placeholder="請填寫圖片網址" class="travelImg">
+            </div>
+            <div class="inputArea">
+                <label for="">景點地區</label>
+                <select class="travelLocation">
+                    <option value="請選擇景點地區" disabled selected hidden>請選擇景點地區</option>
+                    <option value="台北">台北</option>
+                    <option value="台中">台中</option>
+                    <option value="高雄">高雄</option>
+                </select>
+            </div>
+            <div class="inputArea">
+                <label for="">套票金額</label>
+                <input type="number"  min="0" placeholder="請填寫套票金額" class="travelPrice">
+            </div>
+            <div class="inputArea">
+                <label for="">套票組數</label>
+                <input type="number" min="0" placeholder="請填寫套票組數" class="travelGroup">
+            </div>
+            <div class="inputArea">
+                <label for="">套票星級</label>
+                <input type="number" min="1" max="10" placeholder="請填寫套票星級" class="travelLevel">
+            </div>
+            <div class="inputArea">
+                <label for="">套票描述</label>
+                <textarea cols="30" rows="10" placeholder="請填寫套票描述（限 100 字）" class="travelText"></textarea>
+            </div>
+            <input type="button" value="新增套票" class="btn">
+        </form>
+    </div>
+
+    <section class="travelArea">
+        <div class="searchArea">
+            <select>
+                <option value="地區搜尋" disabled selected hidden>地區搜尋</option>
+                <option value="全部地區">全部地區</option>
+                <option value="台北">台北</option>
+                <option value="台中">台中</option>
+                <option value="高雄">高雄</option>
+            </select>
+            <p></p>
+        </div>
+        <ul>
+         
+            
+        </ul>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="all.js"></script>
+</body>
+
+</html>
