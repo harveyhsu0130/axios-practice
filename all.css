@@ -117,7 +117,7 @@ align-self: flex-end;
 
 .searchArea{
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     max-width: 920px;
     margin: 0 auto 50px auto;
     color: #818a91;
@@ -203,4 +203,9 @@ align-self: flex-end;
     border-top-right-radius: 4px;
     border-bottom-right-radius: 4px;
     top: 217px;
+}
+.chart{
+    margin-left: auto;
+    width: 200px;
+    height: 200px;
 }

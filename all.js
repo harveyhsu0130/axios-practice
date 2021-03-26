@@ -1,18 +1,22 @@
 
 
-
-axios.get(`https://raw.githubusercontent.com/hexschool/js-training/main/travelApi.json`)
-.then(function (response) {
+function init(){
+ axios.get(`https://raw.githubusercontent.com/hexschool/js-training/main/travelApi.json`)
+   .then(function (response) {
    
 
-travelData=response.data.data;
-showTravelInfo(travelData);//首次渲染
-});
+    travelData=response.data.data;
+    showTravelInfo(travelData);//首次渲染
+    renderC3();
+    });
+}
 
-let travelData=[];
+init();
+
+  let travelData=[];
   
   let travelInfo='';
-  let travelNum=0;
+  // let travelNum=0;
   const list = document.querySelector('ul');
   const searchLocation=document.querySelector('.searchArea select');
   const showSearchNum=document.querySelector('.searchArea p');
@@ -39,7 +43,7 @@ let travelData=[];
         alert('套票星級必須在1~10之間');
     }else{
       let obj={};
-      obj.id=data.length;
+      obj.id=travelData.length;
       obj.name=travelName.value;
       obj.imgUrl=travelImg.value;
       obj.area=travelLocation.value;
@@ -47,8 +51,9 @@ let travelData=[];
       obj.group=Number(travelGroup.value);
       obj.price=Number(travelPrice.value);
       obj.rate=Number(travelLevel.value);
-      data.push(obj);
-      showTravelInfo();
+      travelData.push(obj);
+      showTravelInfo(travelData);
+      renderC3();
       showSearchNum.textContent=``;
       searchLocation.value="地區搜尋";
       travelName.value='';
@@ -98,11 +103,55 @@ searchLocation.addEventListener('change',function(e){
       showSearchNum.textContent=`本次搜尋共 ${areaFilter.length} 筆資料`;
     }else if(e.target.value=="全部地區"){
       showTravelInfo(travelData);
-      showSearchNum.textContent=`本次搜尋共 ${data.length} 筆資料`;
+      showSearchNum.textContent=`本次搜尋共 ${travelData.length} 筆資料`;
     }
   })
   
 })
+
+
+function renderC3(){
+  let total={};
+  travelData.forEach(function(item){
+     if(total[item.area]==undefined){
+       total[item.area]=1
+     }else{
+       total[item.area]+=1
+     }
+   })
+   
+   
+   let newData=Object.keys(total);
+   let c3Array=[]
+   newData.forEach(function(item){
+     let newArray=[];
+     newArray.push(item);
+     newArray.push(total[item]);
+     c3Array.push(newArray);
+      
+   })
+   
+
+   const chart = c3.generate({
+    bindto: '.chart',
+    data: {
+      columns:c3Array,
+      type:'donut',
+    },
+
+    donut:{
+      title:"套票地區比重",
+      width: 15,
+      
+    },
+    color: {
+      pattern: ['#E68618', '#26C0C7','#5151D3' ]
+    },
+   
+  
+});
+
+}
 
 
 
